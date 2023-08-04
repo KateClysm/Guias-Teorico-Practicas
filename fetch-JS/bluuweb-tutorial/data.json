@@ -1,0 +1,22 @@
+[
+    {
+        "nombre":"Claudia",
+        "edad":23,
+        "ciudad":"Madryn"
+    },
+    {
+        "nombre":"Omar",
+        "edad":66,
+        "ciudad":"Trelew"
+    },
+    {
+        "nombre":"Clara",
+        "edad":12,
+        "ciudad":"Rawson"
+    },
+    {
+        "nombre":"Lara",
+        "edad":24,
+        "ciudad":"Gaiman"
+    }
+]
