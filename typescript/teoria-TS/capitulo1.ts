@@ -69,3 +69,5 @@ const sum2 = (a:number, b:number) => {
 
 //TS agrega funciones adicionales a JS además del tipado, como clases e interfaces.
 
+//nota: un compilador, explicado de manera simplista, es un programa que recibe código y lo transforma a otro código. TS compila de archivos TS a JS.
+
