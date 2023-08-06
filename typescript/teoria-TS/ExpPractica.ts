@@ -363,4 +363,4 @@
 
 //Estos modificadores nos permiten controlar la encapsulación y la seguridad de nuestras clases y nos ayudan a evitar que el código acceda a partes sensibles de la clase desde fuera de su contexto apropiado.
 
-console.log('Hey! sólo estoy agregando esta línea de código para que este archivo se pueda visualizar en github :)')
+let hi = 'Hey! sólo estoy agregando esta línea de código para que este archivo se pueda visualizar en github :)';
