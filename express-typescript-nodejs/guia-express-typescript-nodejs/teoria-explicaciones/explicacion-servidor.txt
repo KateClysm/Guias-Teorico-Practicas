@@ -1,0 +1,72 @@
+-CÓDIGO SERVIDOR => APP.TS-
+
+
+import express, { Request, Response } from 'express';
+
+const app = express();
+const PORT = 3000;
+
+app.get('/', (req: Request, res: Response) => {
+    res.send('¡Hola, mundo desde TypeScript!');
+});
+
+app.listen(PORT, () => {
+    console.log(`Servidor iniciado en el puerto ${PORT}`);
+});
+
+
+
+
+-EXPLICACIÓN-
+
+
+Este código utiliza TypeScript y el framework Express para crear un servidor web básico que escucha en el puerto 3000 y responde a las solicitudes en la ruta raíz ('/') con el mensaje "¡Hola, mundo desde TypeScript!".
+
+import express, { Request, Response } from 'express';: Esta línea importa las funciones y tipos necesarios de Express. express es una función que crea una instancia de la aplicación Express, y { Request, Response } son tipos definidos por Express que se utilizan para manejar las solicitudes y respuestas HTTP de manera más específica.
+
+const app = express();: Aquí se crea una instancia de la aplicación Express llamada app. Esta instancia será la base sobre la cual construirás tu servidor y definirás rutas.
+
+const PORT = 3000;: Se define una constante llamada PORT que almacena el número de puerto en el que el servidor escuchará las solicitudes entrantes. En este caso, el servidor se ejecutará en el puerto 3000.
+
+app.get('/', (req: Request, res: Response) => { ... });: Este bloque de código define una ruta utilizando el método get de Express. Cuando se recibe una solicitud GET en la ruta raíz (/), se ejecutará la función de manejo proporcionada. En este caso, la función toma dos argumentos: req (el objeto de solicitud) y res (el objeto de respuesta). La función envía como respuesta el mensaje "¡Hola, mundo desde TypeScript!" utilizando el método send del objeto res.
+
+app.listen(PORT, () => { ... });: Aquí se inicia el servidor Express y se hace que escuche en el puerto especificado (PORT). La función de devolución de llamada (callback) se ejecutará una vez que el servidor esté escuchando en el puerto. En este caso, se muestra un mensaje en la consola indicando que el servidor se ha iniciado en el puerto especificado.
+
+En resumen, este código configura un servidor web básico utilizando Express y TypeScript. Cuando se ejecuta, el servidor escuchará en el puerto 3000 y responderá con "¡Hola, mundo desde TypeScript!" cuando se realice una solicitud GET en la ruta raíz (/).
+
+
+-SIMPLIFICACIÓN-
+
+// Importamos el paquete Express y algunos tipos especiales.
+import express, { Request, Response } from 'express';
+
+// Creamos una aplicación Express.
+const app = express();
+
+// Definimos en qué número de "puerto" el servidor va a escuchar.
+const PORT = 3000;
+
+// Cuando alguien visite la ruta principal ("/"), el servidor hará esto:
+app.get('/', (req: Request, res: Response) => {
+    // Enviamos como respuesta el mensaje "¡Hola, mundo desde TypeScript!".
+    res.send('¡Hola, mundo desde TypeScript!');
+});
+
+// Iniciamos el servidor en el puerto que definimos antes.
+app.listen(PORT, () => {
+    // Cuando el servidor se inicie, mostramos un mensaje en la consola.
+    console.log(`Servidor iniciado en el puerto ${PORT}`);
+});
+
+
+Importamos el paquete Express, que nos ayuda a crear aplicaciones web, y algunos tipos especiales para manejar solicitudes y respuestas de manera más fácil.
+
+Creamos una aplicación de Express para construir nuestro servidor web.
+
+Decidimos en qué número de "puerto" nuestro servidor va a escuchar. Imagina que el puerto es como una puerta de entrada para que las personas visiten nuestro servidor.
+
+Cuando alguien visite la página principal ("/"), el servidor hará lo siguiente:
+
+Recibirá la solicitud (como cuando alguien llama a tu puerta).
+Enviará como respuesta un mensaje que dice "¡Hola, mundo desde TypeScript!".
+Finalmente, iniciamos el servidor en el puerto que elegimos antes. Y cuando el servidor esté listo para recibir visitas, mostramos un mensaje en la consola.

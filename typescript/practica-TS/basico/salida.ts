@@ -16,6 +16,7 @@ console.log(miArrayExample);  //[ 'Este', 'texto', 'se', 'dividirá', 'en', 'cad
 let myFlexibleVar:any = "Hello";
 myFlexibleVar = 22;
 
+
 //arrays de distinto tipo
 let ExampleArray:any[] = ["","",""];
 ExampleArray = [true,"Hello",3]

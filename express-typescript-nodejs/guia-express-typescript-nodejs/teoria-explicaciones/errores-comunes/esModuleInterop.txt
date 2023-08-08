@@ -1,0 +1,84 @@
+
+
+-EJEMPLO DEL ERROR-
+
+
+src/app.ts:1:8 - error TS1259: Module '"C:/Users/Laptop/Desktop/Practicas-JavaScript/express-nodejs/guia-Express/proyecto/node_modules/@types/express/index"' can only be default-imported using the 'esModuleInterop' flag
+
+1 import express from 'express';
+         ~~~~~~~
+
+   node_modules/@types/express/index.d.ts:136:1
+     136 export = e;
+         ~~~~~~~~~~~
+     This module is declared with 'export =', and can only be used with a default import when using the 'esModuleInterop'
+ flag.
+
+ src/app.ts:6:15 - error TS7006: Parameter 'req' implicitly has an 'any' type.
+
+ 6 app.get('/', (req, res) => {
+                 ~~~
+
+ src/app.ts:6:20 - error TS7006: Parameter 'res' implicitly has an 'any' type.
+
+ 6 app.get('/', (req, res) => {
+                      ~~~
+
+
+ Found 3 errors in the same file, starting at: src/app.ts:1
+
+
+
+
+
+
+-RESOLUCIÓN-
+
+sigue los pasos del capitulo1, luego:
+
+Los errores que estás experimentando están relacionados con la configuración de TypeScript y cómo se importa el módulo de Express.
+
+ Configura el Archivo de Entrada: En app.ts, configura y crea una aplicación Express. Para resolver los errores que mencionaste, ajusta el import de Express y asegúrate de usar tipos explícitos en las funciones de manejo de rutas:
+
+ import express, { Request, Response } from 'express';
+
+ const app = express();
+ const PORT = 3000;
+
+ app.get('/', (req: Request, res: Response) => {
+     res.send('¡Hola, mundo desde TypeScript!');
+ });
+
+ app.listen(PORT, () => {
+     console.log(`Servidor iniciado en el puerto ${PORT}`);
+ });
+
+
+Compilación y Ejecución
+
+ Sigue los mismos pasos para compilar y ejecutar el código como se mencionó anteriormente (capitulo1).
+
+ Al agregar los tipos Request y Response en la importación y luego utilizarlos en las funciones de manejo de rutas, deberías resolver los errores relacionados con los tipos. También, asegúrate de tener la configuración esModuleInterop en tu archivo tsconfig.json para permitir la importación por defecto de módulos.
+
+ {
+     "compilerOptions": {
+         "target": "ES6",
+         "module": "CommonJS",
+         "outDir": "./dist",
+         "rootDir": "./src",
+         "strict": true,
+         "esModuleInterop": true
+     },
+     "include": [
+         "./src/**/*.ts"
+     ]
+ }
+
+Esto debería solucionar los problemas que enfrentaste. 
+
+
+
+En mi caso, al finalizar volví a hacer tsc en mi carpeta proyecto, luego node dist/app.js y la consola me devolvió un mensaje positivo:
+
+ PS C:\Users\Laptop\Desktop\Practicas-JavaScript\express-nodejs\guia-Express\proyecto> node dist/app.js
+ Servidor iniciado en el puerto 3000

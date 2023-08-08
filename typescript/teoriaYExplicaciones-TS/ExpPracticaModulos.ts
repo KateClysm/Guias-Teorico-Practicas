@@ -11,6 +11,7 @@
 // Paso 2: Crear un archivo de TypeScript
 // Crea un archivo TypeScript con la extensión ".ts". Por ejemplo, crea un archivo llamado "moduloEjemplo.ts".
 
+
 // Paso 3: Definir código en el módulo
 // Dentro del archivo "moduloEjemplo.ts", define las funciones, clases o variables que deseas exportar a otros archivos. Por ejemplo:
 
@@ -36,7 +37,7 @@
 
 // Paso 5: Compilación y ejecución
 // Antes de ejecutar el código, debes compilar los archivos TypeScript a JavaScript. Desde la línea de comandos, ejecuta el siguiente comando:
-// tsc moduloEjemplo.ts main.ts
+// tsc moduloEjemplo.ts main.ts 
 
 //Esto generará archivos JavaScript (.js) correspondientes a tus archivos TypeScript. Luego, puedes ejecutar el código usando Node.js:
 //node main.js
