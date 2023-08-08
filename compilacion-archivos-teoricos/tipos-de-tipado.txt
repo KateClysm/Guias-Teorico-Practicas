@@ -1,0 +1,51 @@
+
+1. Lenguaje Tipado (Typed Language):
+
+Un lenguaje tipado es aquel en el que las variables tienen un tipo específico de dato asociado. Esto significa que cuando declaras una variable, también especificas qué tipo de valor puede contener. Los lenguajes tipados ayudan a prevenir errores de tipo durante la compilación o ejecución temprana al verificar que las operaciones sean coherentes con los tipos de datos.
+
+Ejemplos de lenguajes tipados incluyen Java, C++, C#, TypeScript y Kotlin.
+
+
+2. Lenguaje No Tipado (Untyped Language o Dynamic Language):
+
+En un lenguaje no tipado, las variables no tienen un tipo de dato definido y pueden cambiar de tipo en tiempo de ejecución. Esto permite mayor flexibilidad, pero también puede aumentar la posibilidad de errores sutiles y difíciles de detectar, ya que los errores de tipo pueden manifestarse en tiempo de ejecución.
+
+Ejemplos de lenguajes no tipados incluyen JavaScript y Python.
+
+// Ejemplo de lenguaje no tipado (dinámico)
+let variable = 42;  // Se asigna un número
+console.log(variable);  // Output: 42
+
+variable = "Hola";  // Se asigna una cadena de texto
+console.log(variable);  // Output: Hola
+
+
+
+3. Lenguaje Fuertemente Tipado (Strongly Typed Language):
+
+Un lenguaje fuertemente tipado es aquel en el que las conversiones automáticas entre tipos de datos no están permitidas sin una conversión explícita. Esto significa que las operaciones deben ser coherentes con los tipos de datos, y las conversiones entre tipos diferentes deben ser realizadas de manera explícita por el programador.
+
+Ejemplos de lenguajes fuertemente tipados incluyen Java, C++, C# y TypeScript.
+
+En resumen:
+
+Lenguaje Tipado: Los tipos de datos de las variables son estrictos y predefinidos. Ayuda a prevenir errores de tipo en tiempo de compilación.
+
+Lenguaje No Tipado: Las variables pueden cambiar de tipo en tiempo de ejecución. Puede resultar en errores de tipo en tiempo de ejecución.
+
+Lenguaje Fuertemente Tipado: Las conversiones automáticas entre tipos no están permitidas sin conversión explícita. Requiere coherencia en las operaciones y conversiones.
+
+Es importante comprender las diferencias entre estos conceptos, ya que tienen un impacto en cómo se manejan los tipos de datos y los errores en un lenguaje de programación.
+
+
+// Ejemplo de lenguaje tipado (TypeScript)
+let age: number = 30;  // Variable con tipo numérico
+// age = "Treinta";  // Esto causaría un error de tipo en tiempo de compilación
+console.log(age);  // Output: 30
+
+// Ejemplo de lenguaje no tipado (dinámico)
+let variable = 42;  // Se asigna un número
+console.log(variable);  // Output: 42
+
+variable = "Hola";  // Se asigna una cadena de texto
+console.log(variable);  // Output: Hola

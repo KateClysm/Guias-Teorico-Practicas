@@ -1,0 +1,20 @@
+Compilación:
+
+La compilación se refiere al proceso de traducir un código fuente de un lenguaje de programación a otro. Por lo general, implica convertir un lenguaje de programación de nivel alto (como C++, Java, C#) en lenguaje de máquina o en un lenguaje intermedio que pueda ser ejecutado directamente por una máquina. El objetivo principal de la compilación es generar un programa ejecutable o un archivo binario que pueda ser comprendido y ejecutado por la computadora o el sistema operativo. Los compiladores son herramientas que realizan este proceso.
+
+Traspilación:
+
+La traspilación es un tipo específico de compilación que involucra la traducción de código fuente de un lenguaje de programación a otro lenguaje de programación de nivel similar o equivalente. En el contexto del desarrollo web y front-end, la traspilación se refiere principalmente a la conversión de código de un lenguaje moderno (como TypeScript, ES6+) a una versión anterior o más ampliamente compatible de JavaScript (como ES5). En lugar de generar un archivo binario, la traspilación crea un código equivalente en otro lenguaje para que pueda ser entendido y ejecutado en entornos que podrían no admitir características más nuevas o no estándar.
+
+En resumen:
+
+Compilación: Proceso de traducción de un lenguaje a otro, generalmente de alto nivel a lenguaje de máquina o a un lenguaje intermedio.
+
+Traspilación: Proceso de traducción de un lenguaje a otro lenguaje de nivel similar o equivalente, a menudo para mejorar la compatibilidad o para adaptarse a entornos específicos.
+
+Un ejemplo común de traspilación en el mundo web es la conversión de TypeScript (un lenguaje de nivel superior con características adicionales) a JavaScript (lenguaje ampliamente compatible con navegadores).
+
+
+
+
+

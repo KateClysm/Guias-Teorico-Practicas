@@ -1,0 +1,83 @@
+-INSTALACIÓN Y USO DE EXPRESS Y TYPESCRIPT-
+
+Paso 1: Configuración del Proyecto
+
+Instala Node.js: Asegúrate de tener Node.js instalado en tu sistema. Puedes descargarlo desde nodejs.org.
+
+Crea una Carpeta para tu Proyecto: Crea una nueva carpeta en tu sistema donde alojarás tu proyecto.
+
+Inicializa el Proyecto: Abre una terminal en la carpeta de tu proyecto y ejecuta el siguiente comando para iniciar un nuevo proyecto de Node.js. Sigue las instrucciones para configurar el proyecto (nombre, versión, etc.):
+
+npm init
+
+o si por ahora quieres evitar la configuración : npm init -y
+
+esto crea el package.json
+
+
+ Paso 2: Instalación de Dependencias
+
+ Instala TypeScript: Instala TypeScript globalmente (si no lo tienes) y como dependencia de desarrollo:
+
+ npm install -g typescript  //instala typescript globalmente
+
+ npm install --save-dev typescript 
+
+ Crea un archivo de configuración TypeScript: En la raíz de tu proyecto, crea un archivo llamado tsconfig.json para configurar TypeScript:
+
+ {
+     "compilerOptions": {
+         "target": "ES6",
+         "module": "CommonJS",
+         "outDir": "./dist",
+         "rootDir": "./src",
+         "strict": true,
+         "esModuleInterop": true
+     },
+     "include": [
+         "./src/**/*.ts"
+     ]
+ }
+
+ Paso 3: Instalación de Express y Configuración de TypeScript
+
+ Instala Express y tipos de TypeScript para Express: Instala Express y los tipos de TypeScript para Express:
+
+ npm install express
+
+ npm install --save-dev @types/express
+
+ Paso 4: Creación de una Aplicación Express con TypeScript
+
+ Crea una Carpeta para el Código Fuente: En la raíz de tu proyecto, crea una carpeta llamada src.
+
+ Crea un Archivo de Entrada TypeScript: En la carpeta src, crea un archivo llamado app.ts.
+
+ Configura el Archivo de Entrada: En app.ts, configura y crea una aplicación Express:
+
+ import express, { Request, Response } from 'express';
+
+ const app = express();
+ const PORT = 3000;
+
+ app.get('/', (req: Request, res: Response) => {
+     res.send('¡Hola, mundo desde TypeScript!');
+ });
+
+ app.listen(PORT, () => {
+     console.log(`Servidor iniciado en el puerto ${PORT}`);
+ });
+
+ Paso 5: Compilación y Ejecución
+
+ Compila el Código TypeScript: En la terminal, ejecuta el siguiente comando para compilar tu código TypeScript:
+
+ tsc
+
+ Esto compilará el código TypeScript en la carpeta dist según la configuración de tsconfig.json.
+
+ Ejecuta la Aplicación: A continuación, ejecuta el archivo compilado con Node.js:
+
+ node dist/app.js
+
+ Accede a la Aplicación: Abre un navegador y visita http://localhost:3000 para ver el mensaje "¡Hola, mundo desde TypeScript!".

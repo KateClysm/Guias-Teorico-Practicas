@@ -1,0 +1,118 @@
+
+-PROTOCOLO HTTP-
+
+temas:
+    -Explicación Sencilla
+    -Ejemplo Teórico
+
+
+
+
+-Explicación Sencilla-
+
+
+El Protocolo de Transferencia de Hipertexto (HTTP, por sus siglas en inglés) es un protocolo de comunicación utilizado en la World Wide Web para el intercambio de datos entre un cliente (como un navegador web) y un servidor web. 
+
+Aquí tienes una explicación simplificada del protocolo HTTP:
+
+1. Cliente y Servidor:
+
+Cliente: Puede ser un navegador web, una aplicación móvil o cualquier software que solicite recursos a través de Internet.
+
+Servidor: Es una máquina que aloja y proporciona recursos, como páginas web, imágenes o archivos, en respuesta a las solicitudes del cliente.
+
+
+2. Solicitud y Respuesta:
+
+Solicitud (Request): El cliente envía una solicitud al servidor para obtener un recurso específico. Esta solicitud contiene información como la URL del recurso, el método HTTP (GET, POST, etc.), y posibles datos adicionales.
+
+Respuesta (Response): El servidor procesa la solicitud y devuelve una respuesta al cliente. Esta respuesta incluye un código de estado (por ejemplo, 200 OK para éxito, 404 Not Found si el recurso no existe), información sobre el recurso solicitado y posiblemente otros encabezados.
+
+
+3. Métodos HTTP:
+
+Los métodos HTTP definen qué acción debe realizarse en el recurso. 
+
+Algunos métodos comunes son:
+
+GET: Obtener un recurso.
+
+POST: Enviar datos al servidor (por ejemplo, enviar un formulario).
+
+PUT: Actualizar un recurso existente.
+
+DELETE: Eliminar un recurso.
+
+
+4. Encabezados:
+
+Los encabezados son información adicional enviada junto con las solicitudes y respuestas HTTP. Pueden contener detalles sobre el tipo de contenido, la longitud de los datos, cookies, autenticación, entre otros.
+
+
+5. Códigos de Estado:
+
+Los códigos de estado indican el resultado de una solicitud. 
+
+Algunos ejemplos son:
+
+200 OK: La solicitud se procesó con éxito.
+
+404 Not Found: El recurso solicitado no se encontró.
+
+500 Internal Server Error: Hubo un error en el servidor.
+
+
+6. Hipertexto y Enlaces:
+
+El "hipertexto" son los enlaces que conectan documentos y recursos en la web. Los enlaces permiten navegar entre diferentes páginas y sitios web.
+
+
+7. Versión HTTP:
+
+HTTP tiene varias versiones, siendo las más comunes HTTP/1.1 y HTTP/2. Cada versión tiene mejoras en la eficiencia y características.
+
+En resumen, HTTP es el lenguaje que los navegadores web y servidores usan para comunicarse entre sí. Cuando visitas una página web, tu navegador envía solicitudes HTTP al servidor, y el servidor responde con los datos necesarios para mostrar la página en tu navegador. Es un protocolo fundamental para el funcionamiento de la web moderna.
+
+
+
+
+-Ejemplo Teórico-
+
+Ejemplo práctico del intercambio de solicitudes y respuestas HTTP entre un cliente (navegador web) y un servidor web:
+
+Escenario: Imagina que estás utilizando tu navegador web para acceder a una página de noticias.
+
+
+Solicitud del Cliente:
+
+Abres tu navegador y escribes la dirección URL de una página de noticias en la barra de direcciones.
+Tu navegador crea una solicitud HTTP para esa dirección y la envía al servidor de la página de noticias.
+La solicitud contiene información como el método (por defecto es GET), la dirección URL y otros encabezados.
+
+
+Respuesta del Servidor:
+
+El servidor de la página de noticias recibe la solicitud y procesa la dirección URL solicitada.
+
+El servidor busca la página de noticias correspondiente en su base de datos o sistema de archivos.
+
+Si la página existe, el servidor genera una respuesta HTTP.
+
+La respuesta contiene un código de estado (por ejemplo, 200 OK), encabezados y el contenido de la página de noticias.
+
+
+Visualización en el Navegador:
+
+Tu navegador recibe la respuesta del servidor.
+
+Si el código de estado es 200 OK, tu navegador interpreta los encabezados para determinar el tipo de contenido (por ejemplo, HTML) y muestra la página de noticias en la ventana del navegador.
+
+
+Mostrar Contenido:
+
+El navegador procesa el contenido HTML recibido y muestra el texto, imágenes y otros elementos de la página de noticias.
+
+Si la página tiene enlaces a otros recursos (imágenes, videos, etc.), el navegador generará solicitudes HTTP adicionales para obtener esos recursos y mostrarlos correctamente.
+
+En resumen, cuando accedes a una página web, estás interactuando con el protocolo HTTP sin siquiera darte cuenta. Tu navegador envía solicitudes al servidor para obtener recursos (como páginas HTML, imágenes y archivos) y el servidor responde proporcionando los datos necesarios. El protocolo HTTP es el sistema subyacente que permite la comunicación entre tu navegador y los servidores web que alojan los contenidos que ves en la web.
+
