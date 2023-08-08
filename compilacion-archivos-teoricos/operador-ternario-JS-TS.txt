@@ -1,0 +1,43 @@
+temas:
+
+    -Definición General
+    -Operador Ternario en JavaScript
+    -Operador Ternario en TypeScript
+
+
+-Definición General-
+
+ El operador ternario es una construcción en programación que permite tomar una decisión entre dos valores o expresiones basada en una condición. A menudo se utiliza como una forma más concisa de escribir una declaración if...else.
+
+La estructura básica del operador ternario es la siguiente:
+
+condición ? valorSiVerdadero : valorSiFalso
+
+Aquí está cómo funciona:
+
+condición: Es una expresión o una evaluación booleana. Si esta condición es verdadera (true), el operador ternario devuelve valorSiVerdadero. Si la condición es falsa (false), devuelve valorSiFalso.
+
+valorSiVerdadero: Es el valor o expresión que se devuelve si la condición es verdadera.
+
+valorSiFalso: Es el valor o expresión que se devuelve si la condición es falsa.
+
+
+-Operador Ternario en JavaScript-
+
+const edad = 18;
+const mensaje = edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+
+console.log(mensaje); // Dependiendo de la edad, imprimirá uno de los dos mensajes
+
+En este ejemplo, la condición edad >= 18 se evalúa. Si es verdadera, se asigna el mensaje "Eres mayor de edad" a la variable mensaje. Si es falsa, se asigna el mensaje "Eres menor de edad". Luego, el valor de mensaje se imprime en la consola.
+
+
+
+-Operador Ternario en TypeScript-
+
+const edad: number = 18;
+const mensaje: string = edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+
+console.log(mensaje); // Dependiendo de la edad, imprimirá uno de los dos mensajes
+
+La única diferencia en este ejemplo es que se especifica el tipo de las variables edad y mensaje.

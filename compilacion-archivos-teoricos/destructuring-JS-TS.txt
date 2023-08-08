@@ -1,0 +1,80 @@
+temas:
+
+    -Definición General
+    -Destructuring en JavaScript
+        -Destructuring de Arrays
+        -Destructuring de objetos
+    -Destructuring en TypeScript
+        -Destructuring de Arrays
+        -Destructuring de objetos
+
+
+-Definición General-
+
+el destructuring es una característica de los lenguajes de programación que permite descomponer o extraer valores de estructuras de datos como arrays o objetos en variables individuales. Esto hace que sea más fácil y conciso acceder a elementos específicos de una estructura sin necesidad de acceder directamente a través de índices o nombres de propiedades.
+Hay dos tipos principales de destructuring en JavaScript: destructuring de arrays y destructuring de objetos.
+
+
+
+-Destructuring en JavaScript
+
+    -Destructuring de Arrays
+
+const numeros = [1, 2, 3, 4, 5];
+
+const [primero, segundo, ...resto] = numeros;
+
+console.log(primero); // 1
+console.log(segundo); // 2
+console.log(resto);   // [3, 4, 5]
+
+En este ejemplo, estamos extrayendo los primeros dos elementos del array numeros en las variables primero y segundo, y luego estamos utilizando el operador rest (...) para recoger el resto de los elementos en el array resto.
+
+
+    -Destructuring de Objetos:
+
+const persona = { nombre: 'Juan', edad: 30, ocupacion: 'Programador' };
+
+const { nombre, edad } = persona;
+
+console.log(nombre); // 'Juan'
+console.log(edad);   // 30
+
+Aquí estamos extrayendo las propiedades nombre y edad del objeto persona en variables del mismo nombre.
+
+El destructuring es útil para simplificar el código y mejorar la legibilidad. Puedes utilizarlo en situaciones donde necesitas acceder a varios valores dentro de una estructura de datos sin repetir el acceso a través de índices o nombres de propiedades.
+
+
+
+
+-Destructuring en TypeScript-
+
+    -Destructuring de Arrays
+
+const numeros: number[] = [1, 2, 3, 4, 5];
+
+const [primero, segundo, ...resto] = numeros;
+
+console.log(primero); // 1
+console.log(segundo); // 2
+console.log(resto);   // [3, 4, 5]
+
+
+
+    -Destructuring de Objetos:
+
+interface Persona {
+  nombre: string;
+  edad: number;
+  ocupacion: string;
+}
+
+const persona: Persona = { nombre: 'Juan', edad: 30, ocupacion: 'Programador' };
+
+const { nombre, edad } = persona;
+
+console.log(nombre); // 'Juan'
+console.log(edad);   // 30
+
+
+Los ejemplos son similares a los de JavaScript, pero en TypeScript especificamos los tipos utilizando la sintaxis de tipos o interfaces. El destructuring funciona de la misma manera en ambos lenguajes, y TypeScript aprovecha la información de tipos para proporcionar verificación de tipos estáticos y autocompletado mejorados mientras trabajas con las variables extraídas.

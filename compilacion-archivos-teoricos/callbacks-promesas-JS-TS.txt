@@ -1,0 +1,203 @@
+
+Temas:
+
+    -Callbacks Definición General
+    -Callbacks en JavaScript
+    -Callbacks en TypeScript
+    -Promesas Definición General
+    -Promesas en JavaScript (+ then, + catch)
+    -Promesas en TypeScript
+
+
+-Callbacks Definición General-
+
+Una callback es una función que se pasa como argumento a otra función y que se ejecuta en algún punto después de que la función receptora haya terminado su ejecución o haya alcanzado un estado específico. Las callbacks son utilizadas para implementar programación asincrónica y permiten que el código continúe ejecutándose mientras se esperan operaciones costosas o eventos externos. Al pasar una función como callback, se le proporciona a la función receptora la capacidad de llamar de vuelta (ejecutar) el código de la función pasada en el momento apropiado.
+
+Esta definición es ampliamente aplicable a muchos lenguajes de programación, ya que el concepto de callbacks se utiliza en una variedad de contextos y entornos para manejar eventos y operaciones asincrónicas.
+
+
+-Callbacks en JavaScript-
+
+Desde la perspectiva de JavaScript, una callback es una función que se pasa como argumento a otra función y se ejecuta después de que esa función haya completado su trabajo. Las callbacks son fundamentales en JavaScript para manejar tareas asincrónicas y eventos.
+
+En JavaScript, muchas operaciones toman tiempo para completarse, como realizar solicitudes a servidores, leer/escribir archivos o esperar a eventos del usuario. En lugar de bloquear la ejecución del código mientras esperamos que estas operaciones finalicen, utilizamos callbacks para decirle a JavaScript qué hacer cuando la operación termine.
+
+Aquí hay un ejemplo simple:
+
+function operacionAsincronica(datos, callback) {
+  console.log("Realizando operación con:", datos);
+  setTimeout(function() {
+    callback("Operación completada");
+  }, 1000); // Simulando una operación que toma 1 segundo
+}
+
+function miCallback(resultado) {
+  console.log("Callback llamado:", resultado);
+}
+
+operacionAsincronica("datos", miCallback);
+
+//consola: 
+Realizando operación con: datos
+Callback llamado: Operación completada
+
+
+En este ejemplo:
+
+operacionAsincronica es una función que simula una operación asincrónica utilizando setTimeout. 
+Toma datos y una función de callback como argumentos.
+
+miCallback es una función que se ejecutará cuando la operación asincrónica haya terminado.
+
+Llamamos a operacionAsincronica con los argumentos "datos" y miCallback.
+
+El código de operacionAsincronica se ejecuta, imprime el mensaje y después de 1 segundo ejecuta la función miCallback con el mensaje "Operación completada".
+
+En resumen, las callbacks en JavaScript nos permiten manejar operaciones asincrónicas y eventos de manera efectiva, evitando bloqueos y permitiendo que el código continúe ejecutándose sin interrupciones mientras esperamos resultados o eventos.
+
+
+
+-Callbacks en TypeScript-
+
+En TypeScript, el uso de callbacks es muy similar a JavaScript, ya que TypeScript es un superset de JavaScript y comparte gran parte de su sintaxis y características. Te mostraré cómo se utilizarían las callbacks en el mismo ejemplo que te proporcioné, pero adaptado a TypeScript:
+
+function operacionAsincronica(datos: string, callback: (resultado: string) => void) {
+  console.log("Realizando operación con:", datos);
+  setTimeout(function() {
+    callback("Operación completada");
+  }, 1000); // Simulando una operación que toma 1 segundo
+}
+
+function miCallback(resultado: string) {
+  console.log("Callback llamado:", resultado);
+}
+
+operacionAsincronica("datos", miCallback);
+
+
+
+La diferencia principal en este código es la inclusión de tipos en los parámetros de función y en la definición de la callback. Aquí hay una explicación de las diferencias:
+
+datos: string: Aquí estamos especificando que el parámetro datos debe ser de tipo string.
+
+callback: (resultado: string) => void: La definición de la callback ahora incluye tipos. Estamos diciendo que callback es una función que toma un parámetro de tipo string llamado resultado y no devuelve nada (void).
+
+Los tipos de retorno (void) también se han agregado en los lugares adecuados para asegurarnos de que las funciones no intenten devolver ningún valor.
+
+El resto del código es idéntico al ejemplo en JavaScript. Al ejecutar este código TypeScript, obtendrás la misma salida en la consola:
+
+Realizando operación con: datos
+Callback llamado: Operación completada
+
+Recuerda que TypeScript proporciona tipos estáticos que pueden ayudar a prevenir errores y mejorar la legibilidad y mantenibilidad del código en comparación con JavaScript puro.
+
+
+
+
+-Promesas Definición General-
+
+Una promesa es un objeto que representa la eventual finalización (éxito o fracaso) de una operación asincrónica. Proporciona una forma estructurada de manejar tareas que llevan tiempo, como solicitudes a servidores, lectura/escritura de archivos u otras operaciones que no se completan inmediatamente. 
+
+Una promesa puede estar en uno de tres estados: 
+pendiente (pending), resuelta (fulfilled) o rechazada (rejected).
+
+ Cuando la operación asincrónica se completa, la promesa cambia de estado y ejecuta las funciones de callback asociadas, dependiendo de si la operación tuvo éxito o fracasó.
+
+Las promesas son una mejora sobre el uso de callbacks anidadas, ya que permiten un flujo de control más legible y evitan el problema conocido como "callback hell" (infierno de callbacks) al encadenar operaciones asincrónicas de manera más clara y estructurada.
+
+Esta definición es ampliamente aplicable a varios lenguajes de programación, ya que el concepto de promesas se ha incorporado en muchas de las principales bibliotecas y entornos de programación para abordar la programación asincrónica de manera más efectiva.
+
+En esencia, una promesa es una forma más estructurada y mejorada de manejar la asincronía en comparación con los callbacks tradicionales. Mientras que ambos conceptos están relacionados con la ejecución de código asincrónico, las promesas proporcionan una abstracción más poderosa y legible.
+
+En un sentido amplio, podríamos considerar que una promesa es una forma de manejar callbacks, pero con una sintaxis más clara y controlada. A continuación, algunas diferencias clave entre las promesas y los callbacks:
+
+Estructura y legibilidad: Las promesas permiten un manejo más estructurado y menos propenso a errores que los callbacks anidados, lo que a menudo se conoce como "callback hell". El encadenamiento de métodos then y catch en las promesas es más fácil de seguir que anidar múltiples niveles de callbacks.
+
+Manejo de errores: Las promesas ofrecen una forma más consistente y manejable de capturar y manejar errores en comparación con los callbacks, donde el manejo de errores puede volverse complicado.
+
+Encadenamiento: Las promesas permiten encadenar operaciones asincrónicas de manera más elegante utilizando múltiples llamadas then, lo que mejora la legibilidad del flujo de control.
+
+Sintaxis más clara: La sintaxis de las promesas es más clara y semántica, lo que facilita la comprensión del flujo asincrónico en el código.
+
+En resumen, aunque las promesas están estrechamente relacionadas con los callbacks en términos de su propósito (manejar la asincronía), las promesas proporcionan una abstracción más avanzada y mejorada que simplifica el manejo de operaciones asincrónicas y reduce la complejidad del código.
+
+
+-Promesas en JavaScript-
+
+
+// Crear una promesa
+const miPromesa = new Promise((resolve, reject) => {
+  // Simular una operación asincrónica (como una solicitud a un servidor)
+  setTimeout(() => {
+    const exito = true; // Cambiar a false para simular un fallo
+    if (exito) {
+      resolve("La operación fue exitosa"); // Cambia a reject para simular un fallo
+    } else {
+      reject("Hubo un error en la operación");
+    }
+  }, 1000); // Simulando una operación que toma 1 segundo
+});
+
+// Manejar el resultado de la promesa
+miPromesa
+  .then(resultado => {
+    console.log("Éxito:", resultado); // Esto se ejecuta si la promesa se resuelve correctamente
+  })
+  .catch(error => {
+    console.log("Error:", error); // Esto se ejecuta si la promesa es rechazada o hay un error
+  });
+
+
+Explicación:
+
+Creamos una promesa llamando al constructor Promise. La promesa toma una función con dos parámetros: resolve y reject. Estos son funciones que se llaman para cambiar el estado de la promesa a resuelta o rechazada.
+
+Dentro de la función de la promesa, simulamos una operación asincrónica utilizando setTimeout. Dependiendo de si la operación se considera un éxito (exito = true) o un fallo (exito = false), llamamos a resolve o reject.
+
+Luego, consumimos la promesa utilizando los métodos then y catch:
+
+El método then se ejecuta cuando la promesa se resuelve exitosamente. Toma una función de callback que recibe el resultado de la operación.
+
+El método catch se ejecuta cuando la promesa es rechazada. Toma una función de callback que recibe el motivo del rechazo.
+
+
+En una promesa, el método resolve se utiliza para cambiar el estado de la promesa a "resuelta" (fulfilled). Cuando la operación asincrónica se completa con éxito, llamamos a resolve y proporcionamos el resultado deseado. Luego, el método then se ejecuta y recibe ese resultado como argumento.
+
+Por otro lado, el método reject se utiliza para cambiar el estado de la promesa a "rechazada" (rejected). Si algo sale mal en la operación asincrónica, llamamos a reject y proporcionamos información sobre el error. Luego, el método catch se ejecuta y recibe el mensaje de error como argumento.
+
+
+//Otra manera simplista de verlo es la siguiente:
+El resolve se activa en el then, mientras que el reject se activa en el catch.
+
+
+Por lo tanto:
+El then comunicaría: ' Éxito: La operación fue exitosa '
+El catch comunicaría: ' Error: Hubo un error en la operación '
+
+
+
+
+
+-Promesas en TypeScript-
+
+// Crear una promesa
+const miPromesa = new Promise((resolve, reject) => {
+  // Simular una operación asincrónica (como una solicitud a un servidor)
+  setTimeout(() => {
+    const exito = true; // Cambiar a false para simular un fallo
+    if (exito) {
+      resolve("La operación fue exitosa"); 
+    } else {
+      reject("Hubo un error en la operación");
+    }
+  }, 1000); // Simulando una operación que toma 1 segundo
+});
+
+// Manejar el resultado de la promesa
+miPromesa
+  .then(resultado => {
+    console.log("Éxito:", resultado); // Esto se ejecuta si la promesa se resuelve correctamente
+  })
+  .catch(error => {
+    console.log("Error:", error); // Esto se ejecuta si la promesa es rechazada o hay un error
+  });
