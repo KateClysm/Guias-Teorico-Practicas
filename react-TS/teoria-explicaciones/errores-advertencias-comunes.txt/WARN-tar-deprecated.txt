@@ -1,0 +1,15 @@
+npm WARN deprecated tar@2.2.2: This version of tar is no longer supported, and will not receive security updates.
+Please upgrade asap.
+
+Found on StackOverflow:
+
+This is not an error. Your tar is outdated. To fix this issue run this command: npm i tar and enter ok. Now your problem of npm WARN deprecated tar@2.2.2: This version of tar is no longer supported, and will not receive security updates. will be fixed.
+
+-Shouldn't it be installed globally? Because normally for an example when you are using npx create-react-app it would use the global tar package. Isn't it? – 
+Nipuna
+
+-actually it uses what ever version create-react-app tells it to use. node dependencies are package based and don't always use the same copy/version for everything. Also test carefully after a major version upgrade like this. There can be breaking changes. – 
+wheredidthatnamecomefrom
+
+-Installing the latest version of tar will ensure that using create-react-app does not throw any warning, but this doesn't mean that the issue is resolved. If you try to update your global packages (assuming create-react-app is installed globally) the same warning is thrown. It seems create-react-app depends on tar-pack@3.4.1 which depends on tar@^2.1.1 As, @wheredidtatnamecomefrom comments above, node dependencies are packaged based and don't always use the same version for everything. Also, tar-pack was last updated 5 years ago. – 
+biplobmanna

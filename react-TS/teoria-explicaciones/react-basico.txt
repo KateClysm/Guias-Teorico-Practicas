@@ -1,0 +1,79 @@
+Temas:
+
+    -Descripción general
+    -Conceptos clave    
+        -Componentes
+        -Virtual DOM
+        -Renderizado Declarativo
+        -Unidireccionalidad de Datos
+        -Reutilización y Composición
+    -Instalación (React + TypeScript)
+    
+
+
+-Descripción General-
+
+React es una biblioteca de JavaScript desarrollada por Facebook que se utiliza para construir interfaces de usuario interactivas y dinámicas en aplicaciones web. La idea principal detrás de React es dividir la interfaz de usuario en pequeños componentes reutilizables, lo que hace que el proceso de construcción y mantenimiento de aplicaciones sea más sencillo y eficiente.
+
+React es una herramienta que ayuda a hacer páginas web que cambian y se actualizan de manera más rápida y fácil. Imagina que estás construyendo con bloques de Lego. Cada bloque es como un pedacito de tu página web, como un botón o una imagen. React te ayuda a armar estos bloques de manera inteligente para que puedas crear páginas web bonitas y funcionales de manera más sencilla. También hace que tu página web sea más rápida al actualizar solo las partes que necesitan cambiar, como una pista de carreras para tus carritos de juguete. React es como una herramienta genial que te ayuda a construir páginas web geniales de manera más fácil y rápida.
+
+
+
+-Conceptos Clave-
+
+    -Componentes-
+
+En React, todo se trata de componentes. Un componente es una parte aislada y reutilizable de la interfaz de usuario. Puede ser algo tan simple como un botón o tan complejo como un formulario completo. Al dividir la interfaz en componentes más pequeños, puedes organizar mejor tu código y hacer que sea más fácil de entender y mantener.
+
+
+    -Virtual DOM-
+
+React utiliza un concepto llamado "Virtual DOM" (DOM virtual). En lugar de manipular directamente el DOM (Document Object Model) del navegador cada vez que cambia algo en la interfaz, React crea una representación virtual de ese DOM y compara los cambios con la versión anterior. Luego, actualiza eficientemente solo las partes necesarias del DOM real, lo que mejora el rendimiento de la aplicación.
+
+
+    -Renderizado declarativo-
+
+En React, defines cómo debería verse tu interfaz en función del estado actual de la aplicación. En lugar de preocuparte por los detalles de cómo se realiza la actualización del DOM, te centras en describir la relación entre los diferentes componentes y su apariencia en diferentes estados.
+
+
+    -Unidireccionalidad de datos-
+
+React sigue un flujo unidireccional de datos. Los datos fluyen desde el componente principal hacia los componentes secundarios. Esto facilita el seguimiento de los cambios y comprender cómo los datos afectan a la interfaz de usuario.
+
+
+    -Reutilización y composición-
+
+Dado que los componentes son piezas independientes y reutilizables, puedes combinarlos y componer interfaces más complejas al combinar varios componentes más pequeños. Esto promueve la reutilización del código y facilita la construcción de aplicaciones más grandes.
+
+
+En resumen, React es una biblioteca que te permite crear interfaces de usuario interactivas y dinámicas dividiendo la aplicación en componentes reutilizables. Utiliza el concepto de Virtual DOM para mejorar el rendimiento y promueve un enfoque declarativo para describir cómo debería verse la interfaz en función del estado de la aplicación. Es una herramienta poderosa para construir aplicaciones web modernas y eficientes.
+
+
+
+-Instalación (React + TypeScript)-
+
+Paso 1: Configura un entorno de desarrollo
+Antes de comenzar, asegúrate de tener Node.js y npm (el administrador de paquetes de Node.js) instalados en tu computadora. Puedes descargarlos e instalarlos desde el sitio web oficial de Node.js.
+
+Paso 2: Crea una nueva aplicación de React con TypeScript
+Para crear una nueva aplicación de React con TypeScript, puedes utilizar una herramienta llamada "Create React App". Abre tu terminal y ejecuta el siguiente comando:
+
+npx create-react-app my-app --template typescript
+
+Esto creará una nueva aplicación de React en una carpeta llamada "my-app" utilizando la plantilla de TypeScript.
+
+Paso 3: Accede a la carpeta de la aplicación
+En la terminal, navega a la carpeta de la aplicación que acabas de crear:
+
+cd my-app
+
+Paso 4: Inicia la aplicación
+Ahora, puedes iniciar la aplicación de React con el siguiente comando:
+
+npm start
+
+Esto abrirá tu aplicación en un navegador web y podrás ver cómo luce.
+
+¡Listo! Ahora tienes una aplicación de React configurada con TypeScript. Puedes comenzar a editar los archivos en la carpeta "src" para construir tu interfaz de usuario utilizando componentes de React y TypeScript.
+
+Ten en cuenta que "Create React App" se encarga de la mayoría de la configuración inicial, como la instalación de las dependencias necesarias y la configuración del entorno de desarrollo. Esto te permite concentrarte en escribir código en lugar de configurar manualmente todas las herramientas.
