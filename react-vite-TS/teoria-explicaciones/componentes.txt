@@ -1,0 +1,135 @@
+ En React, un componente es una unidad reutilizable y autocontenida de una interfaz de usuario. Los componentes en React son como bloques de construcción que permiten dividir la interfaz de usuario en partes más pequeñas y manejables. Estos componentes pueden ser reutilizados en diferentes partes de la aplicación y facilitan el desarrollo, la organización y el mantenimiento del código.
+
+En términos más simples, un componente en React es como una pieza de lego que puedes ensamblar y combinar para construir una interfaz de usuario más grande y compleja. Cada componente puede tener su propia lógica, estado interno y representación visual.
+
+
+Supongamos que tienes un componente llamado MiComponente.tsx:
+
+import React from 'react';
+
+interface MiComponenteProps {
+  mensaje: string;
+}
+
+const MiComponente: React.FC<MiComponenteProps> = ({ mensaje }) => {
+  return <div>{mensaje}</div>;
+};
+
+export default MiComponente;
+
+
+Luego, en tu archivo principal, podrías usar este componente:
+
+import React from 'react';
+import MiComponente from './MiComponente';
+
+const App: React.FC = () => {
+  return (
+    <div>
+      <h1>¡Hola, Componentes en React con TypeScript!</h1>
+      <MiComponente mensaje="Este es un mensaje de ejemplo" />
+    </div>
+  );
+};
+
+export default App;
+
+Estamos usando la interfaz MiComponenteProps para definir las propiedades que el componente espera recibir. Además, hemos utilizado React.FC (Functional Component) para definir la función del componente.
+
+En resumen, los componentes en TypeScript siguen el mismo concepto que en JSX. Solo tienes que agregar algunas anotaciones de tipos para las propiedades y usar React.FC si estás creando componentes funcionales.
+
+
+
+-EXPLICACIÓN DETENIDA DE :
+const MiComponente: React.FC<MiComponenteProps> = ({ mensaje }) => {
+  return <div>{mensaje}</div>;
+};
+
+const MiComponente:: Estamos declarando una constante llamada MiComponente que será nuestro componente. Esta constante almacena una función que representa un componente funcional.
+
+React.FC<MiComponenteProps>: Aquí estamos utilizando la interfaz React.FC (Functional Component) para definir que MiComponente es un componente funcional. También le proporcionamos un tipo genérico <MiComponenteProps>, que especifica las propiedades que se espera que reciba el componente.
+
+= ({ mensaje }) => {: Esto es la declaración de la función flecha que representa el componente funcional. Estamos utilizando desestructuración para extraer la propiedad mensaje de las propiedades que recibe el componente.
+
+return <div>{mensaje}</div>;: Esta es la parte donde se define el contenido del componente. Aquí estamos retornando un elemento div que contiene el valor de la propiedad mensaje que recibimos como una prop.
+
+En resumen, este código define un componente funcional llamado MiComponente que recibe un objeto de propiedades llamado mensaje. Luego, este mensaje se muestra dentro de un elemento div en el contenido del componente.
+
+
+Un componente funcional en React es una forma de crear componentes utilizando funciones en lugar de clases. Estos componentes están escritos como funciones y pueden aceptar propiedades (props) como argumentos y devolver elementos JSX que representan la interfaz de usuario.
+
+En versiones anteriores de React, los componentes se definían principalmente como clases, pero a medida que React evolucionó, se introdujeron los componentes funcionales como una alternativa más concisa y legible. Los componentes funcionales tienen algunas ventajas sobre los componentes de clase, como ser más simples, más fáciles de entender y más eficientes en cuanto al rendimiento.
+
+Es importante mencionar que con la introducción de React Hooks, los componentes funcionales se volvieron aún más poderosos, ya que permiten gestionar el estado y otros aspectos de componentes previamente manejados solo por componentes de clase.
+
+
+
+
+-¿Qué son los Hooks?-
+
+Los hooks son una característica de React que permiten a los componentes funcionales tener acceso a características de componentes de clase, como el estado y el ciclo de vida, sin necesidad de escribir una clase. Los hooks son funciones especiales que se utilizan dentro de componentes funcionales para agregar funcionalidades adicionales. Estas funciones están diseñadas para que los componentes sean más reutilizables, legibles y fáciles de mantener.
+
+-Hooks más comunes-
+
+-useState: Este hook permite agregar estado a un componente funcional. Define una variable de estado y su función de actualización.
+
+import React, { useState } from 'react';
+
+const Contador: React.FC = () => {
+  const [count, setCount] = useState<number>(0);
+
+  return (
+    <div>
+      <p>Contador: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Incrementar</button>
+    </div>
+  );
+};
+
+export default Contador;
+
+
+-useEffect: Este hook permite realizar efectos secundarios en un componente, como manipulación del DOM o llamadas a API, después de que el componente se haya renderizado.
+
+import React, { useState, useEffect } from 'react';
+
+const DataFetching: React.FC = () => {
+  const [data, setData] = useState<string>('');
+
+  useEffect(() => {
+    // Simulando una llamada a una API
+    setTimeout(() => {
+      setData('Datos obtenidos de la API');
+    }, 1000);
+  }, []); // El segundo argumento es un arreglo de dependencias
+
+  return (
+    <div>
+      <p>{data}</p>
+    </div>
+  );
+};
+
+export default DataFetching;
+
+
+-useContext: Este hook permite acceder al contexto de React dentro de un componente, lo que facilita el acceso a valores compartidos en toda la aplicación.
+
+import React, { useContext } from 'react';
+
+const ThemeContext = React.createContext<string>('light');
+
+const ThemedText: React.FC = () => {
+  const theme = useContext(ThemeContext);
+
+  return (
+    <p style={{ color: theme === 'dark' ? 'white' : 'black' }}>
+      Texto con tema {theme}
+    </p>
+  );
+};
+
+export default ThemedText;
+
+Estos son solo algunos ejemplos de los hooks más comunes en React. Los hooks proporcionan una forma más elegante y funcional de trabajar con componentes funcionales, permitiendo la gestión del estado, efectos secundarios y contexto de manera más eficiente.
+

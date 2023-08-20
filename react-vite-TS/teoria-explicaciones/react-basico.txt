@@ -8,6 +8,8 @@ Temas:
         -Unidireccionalidad de Datos
         -Reutilización y Composición
     -Instalación (React + TypeScript)
+    -¿Qué es Vite?
+    -Instalación (React + Vite + TypeScript)
     
 
 
@@ -77,3 +79,42 @@ Esto abrirá tu aplicación en un navegador web y podrás ver cómo luce.
 ¡Listo! Ahora tienes una aplicación de React configurada con TypeScript. Puedes comenzar a editar los archivos en la carpeta "src" para construir tu interfaz de usuario utilizando componentes de React y TypeScript.
 
 Ten en cuenta que "Create React App" se encarga de la mayoría de la configuración inicial, como la instalación de las dependencias necesarias y la configuración del entorno de desarrollo. Esto te permite concentrarte en escribir código en lugar de configurar manualmente todas las herramientas.
+
+
+
+
+-¿Qué es Vite?-
+
+Vite es una herramienta de construcción (build tool) y desarrollo rápido para aplicaciones web. Su enfoque principal es la velocidad y la eficiencia durante el proceso de desarrollo. A diferencia de las herramientas de construcción tradicionales que requieren una fase de compilación previa, Vite utiliza la carga en demanda (on-demand) para cargar módulos y archivos solo cuando son necesarios, lo que reduce significativamente el tiempo de espera durante el desarrollo.
+
+Vite está diseñado para agilizar el proceso de desarrollo de aplicaciones web. Proporciona un entorno de desarrollo con recarga rápida (hot module replacement), lo que significa que los cambios que realices en tu código se reflejarán casi instantáneamente en el navegador, sin necesidad de recargar toda la página. Esto agiliza la iteración y mejora la experiencia del desarrollador.
+
+Vite es especialmente útil cuando trabajas con bibliotecas como React. Dado que React divide la interfaz de usuario en componentes, Vite puede cargar solo los componentes que estás modificando en lugar de recargar toda la aplicación. Esto acelera aún más el proceso de desarrollo y permite una interacción más fluida con tu aplicación React.
+
+ Vite no es estrictamente un framework de React, sino más bien una herramienta de desarrollo y construcción (build tool) que puede utilizarse con diferentes frameworks y bibliotecas, incluido React.
+
+Vite se centra en proporcionar una experiencia de desarrollo rápida y eficiente al cargar módulos bajo demanda durante el desarrollo. Si bien React es una biblioteca para construir interfaces de usuario, Vite puede utilizarse para mejorar el proceso de desarrollo al trabajar con React.
+
+En resumen, Vite es una herramienta que puede complementar el desarrollo de aplicaciones React al proporcionar una forma más rápida y eficiente de desarrollar, pero no es un framework de React en sí mismo.
+
+
+
+-Instalación (React + Vite + TypeScript)-
+
+1) Instalar Node.js: Antes de comenzar, asegúrate de tener Node.js instalado en tu sistema. Puedes descargarlo desde el sitio oficial de Node.js: https://nodejs.org/
+
+2) Crear un nuevo proyecto: Abre tu terminal y navega hasta la ubicación donde deseas crear tu proyecto. Luego, ejecuta los siguientes comandos:
+npx create-vite@latest my-react-app --template react-ts
+
+Esto creará un nuevo proyecto Vite con la plantilla para React y TypeScript.
+
+3)Navegar al directorio del proyecto:
+cd my-react-app
+
+4)Instalar las dependencias:
+npm install
+
+5)Iniciar el servidor de desarrollo:
+npm run dev
+
+Esto lanzará el servidor de desarrollo de Vite y podrás ver tu aplicación React en funcionamiento. Los cambios que realices en tus archivos se reflejarán automáticamente en el navegador.
