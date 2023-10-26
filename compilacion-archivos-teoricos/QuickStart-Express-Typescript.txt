@@ -1,0 +1,79 @@
+Nota: Seguir los siguientes pasos en la carpeta de tu backend si es que tienes front y back en el mismo repositorio, o seguir los pasos en la raíz de tu repositorio si tienes un repo para front y otro individual para el back.
+
+Abir una terminal y tipear: npm init -y
+
+Instalar dependencias:
+
+Copy code
+npm install express express-async-errors typescript ts-node @types/express @types/node
+
+Es una buena idea instalar nodemon para que el servidor se reinicie automáticamente cuando realices cambios en el código:
+
+npm install nodemon --save-dev
+
+Configurar TypeScript:
+
+Crea un archivo tsconfig.json manualmente o ejecutar el siguiente comando para generar un archivo de configuración inicial:
+
+npx tsc --init
+
+Luego, edita el archivo tsconfig.json para ajustar la configuración según tus necesidades. Asegúrate de habilitar la compilación de TypeScript.
+
+
+Configura scripts en el archivo package.json para agregar scripts que te permitan compilar y ejecutar tu servidor. Agrega las siguientes líneas a la sección "scripts":
+
+"main": "dist/index.js",
+"scripts": {
+  "start": "nodemon dist/index.js"
+}
+
+Actualiza tsconfig.json:
+
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    // ... otras opciones ...
+  },
+  "include": ["src/**/*"]
+}
+
+
+Organiza tu proyecto creando una estructura de directorios. Por ejemplo:
+
+- src/
+  - index.ts
+- tsconfig.json
+- package.json
+
+Agrega en index.ts:
+
+import express from 'express';
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello, Express with TypeScript!');
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+
+
+Compila tu código TypeScript:
+
+npx tsc (Para compilar una sola vez)
+o
+npx tsc --watch (Para una compilación constante)
+
+Inicia tu servidor con nodemon:
+
+npm start
+
+*Recuerda crear un archivo .gitignore en la raiz, para luego meter dentro a 
+
+node_modules 
+dist
+
+y que no se suban a github, ya que son carpetas que se pueden volver a generar con comandos. 

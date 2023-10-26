@@ -1,0 +1,19 @@
+Nota: es necesario tener instalado Node.js y npm.
+
+Abrir una terminal en la carpeta donde se encontrará el front.
+
+Si tienes el front en un repositorio aparte del back, puedes hacerlo directamente sobre el directorio raiz.
+
+npx create-vite my-react-app --template react-ts
+Reemplazar my-react-app con el nombre que desees para tu proyecto.
+
+Una vez terminado el proceso, dirigirse a ese directorio 
+cd my-react-app
+
+A continuación, es necesario instalar los tipos requeridos de TypeScript.
+
+npm install --save @types/node @types/react-dom @types/react
+
+Para iniciar el servidor de desarrollo y poder ver el proyecto usa:
+
+npm run dev
